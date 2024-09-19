@@ -70,12 +70,12 @@ const Navbar = () => {
                   ক্রিকেট
                 </li>
               </Link>
-              <Link>
+              <Link to={"/casino"}>
                 <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
                   ক্যাসিনো
                 </li>
               </Link>
-              <Link>
+              <Link to={"/slot"}>
                 <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
                   স্লট গেম
                 </li>

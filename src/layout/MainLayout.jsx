@@ -9,7 +9,7 @@ const MainLayout = () => {
       <Outlet />
       <Footer />
 
-      <div className="flex sticky bottom-0 w-full md:hidden">
+      <div className="flex sticky bottom-0 w-full md:hidden z-50">
         <Link to={"/registration"} className="w-1/2">
           <p className="p-3 text-base text-center font-semibold text-black bg-[#FFCD03] hover:bg-[#e5be22] transition-all duration-500">
             নিবন্ধন করুন

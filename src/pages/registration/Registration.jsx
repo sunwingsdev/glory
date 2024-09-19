@@ -5,7 +5,7 @@ const Registration = () => {
         <h2 className="text-2xl text-center font-semibold pt-10 text-[#333]">
           একাউন্ট তৈরি করুন
         </h2>
-        <p className="text-sm text-center lg:text-base text-[#333]">
+        <p className="px-2 text-sm text-center lg:text-base text-[#333]">
           আসুন আপনাকে No.1 ক্রিকেট এক্সচেঞ্জ এবং বেটিং প্ল্যাটফর্মে নিবন্ধন
           করিয়ে দিই
         </p>
