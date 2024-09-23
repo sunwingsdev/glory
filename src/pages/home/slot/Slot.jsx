@@ -4,7 +4,7 @@ import GameCard from "../../../components/shared/gameCard/GameCard";
 
 const Slot = () => {
   return (
-    <div>
+    <div className="">
       <Banner
         B_image={
           "https://jiliwin.9terawolf.com/images/babu/game_banner/rng_new.jpg"
@@ -15,7 +15,7 @@ const Slot = () => {
       />
       <GameVendorList />
       <div className="container mx-auto px-4 sm:px-10 lg:px-24">
-        <div className="mt-10 pb-10 grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-6">
+        <div className="mt-4 pb-10 grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-6">
           <GameCard
             gameCardImg={
               "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"

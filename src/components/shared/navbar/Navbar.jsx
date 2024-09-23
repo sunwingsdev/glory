@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
 import { FaCaretDown } from "react-icons/fa";
 import { IoMenuOutline } from "react-icons/io5";
+import { useState } from "react";
+import Modal from "../modal/Modal";
 
 const Navbar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div>
       {/* Start top navbar */}
@@ -39,21 +49,22 @@ const Navbar = () => {
             </ul>
             {/* language */}
             <ul>
-              <Link>
-                <li className="text-sm lg:text-base font-semibold px-2 py-1 rounded-lg bg-[#d6d6d6] hover:bg-[#c2c2c2] transition-all duration-500">
-                  <div className="flex items-center">
-                    <div className="w-6 md:w-7">
-                      <img
-                        src={
-                          "https://png.pngtree.com/png-vector/20220606/ourmid/pngtree-bangladesh-flag-icon-in-modern-neomorphism-style-png-image_4872074.png"
-                        }
-                        alt=""
-                      />
-                    </div>
-                    <FaCaretDown />
+              <li
+                onClick={handleModalOpen}
+                className="cursor-pointer text-sm lg:text-base font-semibold px-2 py-1 rounded-lg bg-[#d6d6d6] hover:bg-[#c2c2c2] transition-all duration-500"
+              >
+                <div className="flex items-center">
+                  <div className="w-6 md:w-7">
+                    <img
+                      src={
+                        "https://png.pngtree.com/png-vector/20220606/ourmid/pngtree-bangladesh-flag-icon-in-modern-neomorphism-style-png-image_4872074.png"
+                      }
+                      alt=""
+                    />
                   </div>
-                </li>
-              </Link>
+                  <FaCaretDown />
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -130,6 +141,71 @@ const Navbar = () => {
         </div>
       </div>
       {/* end bottom navbar */}
+
+      {/* Modal  */}
+      <Modal
+        isOpen={isModalOpen}
+        onOpenChange={handleModalClose}
+        title={"Currency and Language"}
+      >
+        <div className="space-y-4">
+          <div className="flex gap-2 md:gap-6">
+            <div className="flex items-center gap-1 md:gap-2 w-full">
+              <img
+                className="w-10"
+                src="https://www.babu88.app/static/image/country/BDT.svg"
+                alt=""
+              />
+              <p className="text-sm md:text-base font-semibold text-gray-400">
+                ৳ BDT
+              </p>
+            </div>
+            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
+              ENGLISH
+            </button>
+            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
+              BENGALI
+            </button>
+          </div>
+          <div className="flex gap-2 md:gap-6">
+            <div className="flex items-center gap-1 md:gap-2 w-full">
+              <img
+                className="w-10"
+                src="https://www.babu88.app/static/image/country/INR.svg"
+                alt=""
+              />
+              <p className="text-sm md:text-base font-semibold text-gray-400">
+                ৳ INR
+              </p>
+            </div>
+            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
+              ENGLISH
+            </button>
+            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
+              HINDI
+            </button>
+          </div>
+          <div className="flex gap-2 md:gap-6">
+            <div className="flex items-center gap-1 md:gap-2 w-full">
+              <img
+                className="w-10"
+                src="https://www.babu88.app/static/image/country/NPR.svg"
+                alt=""
+              />
+              <p className="text-sm md:text-base font-semibold text-gray-400">
+                ৳ NPR
+              </p>
+            </div>
+            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
+              ENGLISH
+            </button>
+            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
+              NEPALESE
+            </button>
+          </div>
+        </div>
+      </Modal>
+      {/* Modal  */}
     </div>
   );
 };

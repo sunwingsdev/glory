@@ -1,7 +1,7 @@
 const Banner = ({ B_image, B_heading, B_semiText, B_text }) => {
   return (
     <div>
-      <div className="relative">
+      <div className="md:block hidden relative">
         <img src={B_image} alt="" />
         <div className="absolute top-6 xl:top-16 left-10 max-w-[600px] text-white">
           <h2 className="text-2xl font-semibold">{B_heading}</h2>
