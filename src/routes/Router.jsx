@@ -5,6 +5,11 @@ import Login from "../pages/login/Login";
 import Registration from "../pages/registration/Registration";
 import Casino from "../pages/home/casino/Casino";
 import Slot from "../pages/home/slot/Slot";
+import TableGames from "@/pages/home/tableGames/TableGames";
+import SportsBook from "@/pages/home/sportsBook/SportsBook";
+import Fishing from "@/pages/home/fishing/Fishing";
+import Crash from "@/pages/home/crash/Crash";
+import Promotion from "@/pages/home/promotion/Promotion";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +35,26 @@ const router = createBrowserRouter([
       {
         path: "/slot",
         element: <Slot />,
+      },
+      {
+        path: "/table-games",
+        element: <TableGames />,
+      },
+      {
+        path: "/sports-book",
+        element: <SportsBook />,
+      },
+      {
+        path: "/fishing",
+        element: <Fishing />,
+      },
+      {
+        path: "/crash",
+        element: <Crash />,
+      },
+      {
+        path: "/promotion",
+        element: <Promotion />,
       },
     ],
   },

@@ -91,27 +91,27 @@ const Navbar = () => {
                   স্লট গেম
                 </li>
               </Link>
-              <Link>
+              <Link to={"/table-games"}>
                 <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
                   টেবিল গেম
                 </li>
               </Link>
-              <Link>
+              <Link to={"/sports-book"}>
                 <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
                   খেলার বই
                 </li>
               </Link>
-              <Link>
+              <Link to={"/fishing"}>
                 <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
                   মাছ ধরা
                 </li>
               </Link>
-              <Link>
+              <Link to={"/crash"}>
                 <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
                   ক্র্যাশ
                 </li>
               </Link>
-              <Link>
+              <Link to={"/promotion"}>
                 <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
                   প্রমোশন
                 </li>
@@ -124,11 +124,6 @@ const Navbar = () => {
               <Link>
                 <li className="px-4 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
                   সুপারিশ
-                </li>
-              </Link>
-              <Link>
-                <li className="px-4 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  অধিভুক্ত
                 </li>
               </Link>
               <Link>
