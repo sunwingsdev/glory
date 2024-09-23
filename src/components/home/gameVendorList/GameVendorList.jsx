@@ -1,90 +1,19 @@
 import GameVendorButton from "@/components/shared/gameVendorButton/GameVendorButton";
 
-const GameVendorList = () => {
+const GameVendorList = ({ buttons }) => {
   return (
     <div>
       <div className="md:container md:mx-auto px-0 md:px-4 sm:px-10 lg:px-24 mt-6">
         <div className="p-2 lg:p-4 bg-slate-100 rounded-lg">
           <div className="flex whitespace-nowrap md:grid xl:grid-cols-6 grid-cols-4 gap-4 overflow-x-auto md:overflow-visible">
-            <GameVendorButton gameVendorText={"সব"} isFirst={true} />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/jili.svg"
-              }
-              gameVendorText={"JILI"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/pp.svg"
-              }
-              gameVendorText={"Pragmatic Play"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/haba.svg"
-              }
-              gameVendorText={"Habanero"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/pg.svg"
-              }
-              gameVendorText={"PG Soft"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/spg.svg"
-              }
-              gameVendorText={"Spade Gaming"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/pt.svg"
-              }
-              gameVendorText={"PlayTech"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/rt.svg"
-              }
-              gameVendorText={"Red Tiger"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/png.svg"
-              }
-              gameVendorText={"Play N' Go"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/jdb.svg"
-              }
-              gameVendorText={"JDB"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/one.svg"
-              }
-              gameVendorText={"One Game"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/netent.svg"
-              }
-              gameVendorText={"NetEnt"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/nolimit.svg"
-              }
-              gameVendorText={"NoLimit"}
-            />
-            <GameVendorButton
-              gameVendorImg={
-                "https://jiliwin.9terawolf.com/images/babu/provider/rng/booongo.svg"
-              }
-              gameVendorText={"Relax Gaming"}
-            />
+            {buttons?.map((button, index) => (
+              <GameVendorButton
+                key={index}
+                gameVendorText={button.text}
+                gameVendorImg={button.image}
+                isFirst={index === 0}
+              />
+            ))}
           </div>
         </div>
       </div>
