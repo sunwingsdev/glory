@@ -249,7 +249,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="">
             <ul className="flex overflow-x-auto">
-              <Link>
+              <Link to={"/cricket"}>
                 <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
                   ক্রিকেট
                 </li>

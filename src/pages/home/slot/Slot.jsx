@@ -1,3 +1,4 @@
+import RouteChange from "@/components/shared/routeChange/RouteChange";
 import GameVendorList from "../../../components/home/gameVendorList/GameVendorList";
 import Banner from "../../../components/shared/banner/Banner";
 import GameCard from "../../../components/shared/gameCard/GameCard";
@@ -76,6 +77,8 @@ const Slot = () => {
         B_semiText={"BABU88 দিয়ে আজই স্পিন করুন এবং জিতে নিন"}
         B_text={"পুরস্কার বিজয়ী গেম প্রদানকারীদের থেকে সেরা স্লট গেম!"}
       />
+      {/* mobile slide menu */}
+      <RouteChange text={"স্লট"} />
       <GameVendorList buttons={buttons} />
       <div className="container mx-auto px-4 sm:px-10 lg:px-24">
         <div className="mt-4 pb-10 grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-6">
@@ -92,169 +95,165 @@ const Slot = () => {
               "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Super Ace"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/51_0.jpg"
             }
             gameHot={
               "https://www.babu88.app/static/svg/game-icon-new-mobile.svg"
             }
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Money Coming"}
+            headingCenter={true}
+          />
+          <GameCard
+            gameCardImg={"https://luckmedia.link/sms_plinkox/thumb.webp"}
+            gameHot={
+              "https://www.babu88.app/static/svg/game-icon-new-mobile.svg"
+            }
+            gameHeading={"PlinkoX"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/cms/h8/image/646df1e242cad.png"
             }
             gameHot={
               "https://www.babu88.app/static/svg/game-icon-new-mobile.svg"
             }
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Golden Land"}
+            headingCenter={true}
+          />
+          <GameCard
+            gameCardImg={"https://luckmedia.link/sms_multi_hot_5/thumb.webp"}
+            gameHot={
+              "https://www.babu88.app/static/svg/game-icon-new-mobile.svg"
+            }
+            gameHeading={"Multi Hot 5"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/cms/h8/image/6304b2d3be3a3.jpeg"
             }
             gameHot={
               "https://www.babu88.app/static/svg/game-icon-new-mobile.svg"
             }
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Captain Golds Fortune"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
-            }
-            gameHot={
-              "https://www.babu88.app/static/svg/game-icon-new-mobile.svg"
-            }
-            gameHeading={"Super Ace Deluxe"}
-            headingCenter={true}
-          />
-          <GameCard
-            gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
-            }
-            gameHot={
-              "https://www.babu88.app/static/svg/game-icon-new-mobile.svg"
-            }
-            gameHeading={"Super Ace Deluxe"}
-            headingCenter={true}
-          />
-          <GameCard
-            gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/cms/h8/image/62de5e8ed509c.png"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Mayan Empire"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/cms/h8/image/6304b29a387f5.jpeg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Sugar Party"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/110_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Ali Baba"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/106_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"TWIN WINS"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/115_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Agent Ace"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/108_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Magic Lamp"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/76_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Party Night"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/92_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Crazy Hunter"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/109_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Fortune Gems"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/103_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Golden Empire"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/102_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"RomaX"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/100_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Super Rich"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/91_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Lucky Coming"}
             headingCenter={true}
           />
           <GameCard
             gameCardImg={
-              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/85_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Super Ace Deluxe"}
+            gameHeading={"Pharaoh Treasure"}
             headingCenter={true}
           />
         </div>

@@ -11,6 +11,7 @@ import Fishing from "@/pages/home/fishing/Fishing";
 import Crash from "@/pages/home/crash/Crash";
 import Promotion from "@/pages/home/promotion/Promotion";
 import Referral from "@/pages/home/referral/Referral";
+import Cricket from "@/pages/home/cricket/Cricket";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/registration",
         element: <Registration />,
+      },
+      {
+        path: "/cricket",
+        element: <Cricket />,
       },
       {
         path: "/casino",

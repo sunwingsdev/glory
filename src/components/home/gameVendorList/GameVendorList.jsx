@@ -3,22 +3,24 @@ import GameVendorButton from "@/components/shared/gameVendorButton/GameVendorBut
 const GameVendorList = ({ buttons }) => {
   return (
     <div>
-      <div className="md:container md:mx-auto px-0 md:px-4 sm:px-10 lg:px-24 mt-6">
+      {/* button */}
+      <div className="md:container md:mx-auto px-0 md:px-4 sm:px-10 lg:px-24 mt-2 md:mt-6">
         <div className="p-2 lg:p-4 bg-slate-100 rounded-lg">
-          <div className="flex whitespace-nowrap md:grid xl:grid-cols-6 grid-cols-4 gap-4 overflow-x-auto md:overflow-visible">
+          <div className="flex md:grid xl:grid-cols-6 grid-cols-4 gap-3 md:gap-4 overflow-x-auto md:overflow-visible">
             {buttons?.map((button, index) => (
               <GameVendorButton
                 key={index}
                 gameVendorText={button.text}
                 gameVendorImg={button.image}
-                isFirst={index === 0}
+                isFirst={!button.image}
               />
             ))}
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-4 sm:px-10 lg:px-24 mt-6">
-        <div className="flex justify-between mt-6 pb-6 border-b-4">
+      {/* select and search */}
+      <div className="container mx-auto px-4 sm:px-10 lg:px-24">
+        <div className="flex justify-between mt-2 md:mt-6 pb-0 md:pb-6 border-b-0 md:border-b-4">
           <div className="hidden md:block">
             <form className="flex gap-4">
               <label
@@ -29,13 +31,19 @@ const GameVendorList = ({ buttons }) => {
               </label>
               <select
                 id="countries"
-                className="bg-white border border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-white border border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full lg:w-64 px-4 py-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected>অনুসন্ধান বিভাগ</option>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
+                <option value="US">সব</option>
+                <option value="US">ক্রিকেট</option>
+                <option value="US">ক্যাসিনো</option>
+                <option value="US">হট গেমস</option>
+                <option value="CA">নতুন গেমস</option>
+                <option value="FR">স্লট</option>
+                <option value="DE">জ্যাকপট</option>
+                <option value="DE">তাস খেলা</option>
+                <option value="DE">টেবিল গেম</option>
+                <option value="DE">ভিডিও পোকার</option>
               </select>
             </form>
           </div>

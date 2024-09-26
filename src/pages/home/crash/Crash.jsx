@@ -1,6 +1,7 @@
 import GameVendorList from "@/components/home/gameVendorList/GameVendorList";
 import Banner from "@/components/shared/banner/Banner";
 import GameCard from "@/components/shared/gameCard/GameCard";
+import RouteChange from "@/components/shared/routeChange/RouteChange";
 
 const Crash = () => {
   const buttons = [
@@ -52,6 +53,8 @@ const Crash = () => {
             "অন্তহীন উত্তেজনার জন্য Aviator এবং Plinko এর মত ক্লাসিক উপভোগ করুন!"
           }
         />
+        {/* mobile slide menu */}
+        <RouteChange text={"ক্যাসিনো"} />
         <GameVendorList buttons={buttons} />
         <div className="container mx-auto px-4 sm:px-10 lg:px-24">
           <div className="mt-10 pb-10 grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-6">

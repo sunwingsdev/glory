@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
 
-const SecondaryBanner = () => {
+const SecondaryBanner = ({ image, zipFile }) => {
   return (
     <div className="py-3">
-      <Link target="_blank">
-        <img
-          src={
-            "https://jiliwin.9terawolf.com/images/babu/banner/register_banner_home.jpg"
-          }
-          alt=""
-        />
+      <Link to={zipFile} target={zipFile ? "_blank" : ""} download={zipFile}>
+        <img src={image} alt="" />
       </Link>
     </div>
   );

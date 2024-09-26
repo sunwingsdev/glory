@@ -11,7 +11,7 @@ const GameCard = ({
     <div className="">
       <div className="relative group overflow-hidden ">
         <img
-          className="w-full h-28 sm:h-auto object-cover rounded-[20px] lg:rounded-xl"
+          className="w-full h-28 sm:h-36 object-cover rounded-[20px] lg:rounded-xl"
           src={gameCardImg}
           alt=""
         />

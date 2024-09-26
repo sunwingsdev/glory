@@ -4,10 +4,8 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { HiMiniSpeakerWave } from "react-icons/hi2";
-import Marquee from "react-fast-marquee";
 
-const BannerSlider = () => {
+const VideoSlider = () => {
   const bannerImages = [
     {
       id: 1,
@@ -83,31 +81,19 @@ const BannerSlider = () => {
       </CarouselContent>
 
       {/* Slide Select Buttons */}
-      <div className="absolute bottom-8 md:bottom-16 right-4 md:right-[5.5rem] flex space-x-2">
+      <div className="absolute bottom-3 md:bottom-4 left-6 md:left-8 flex space-x-2">
         {bannerImages.map((_, index) => (
           <button
             key={index}
             onClick={() => scrollTo(index)}
-            className={`size-[10px] md:size-4 rounded-full hover:bg-white transition-colors ease-in-out duration-300 ${
-              selectedIndex === index ? "bg-white" : "bg-[#12664b]"
+            className={`size-[10px] md:size-4 rounded-full hover:bg-yellow-400 transition-colors ease-in-out duration-300 ${
+              selectedIndex === index ? "bg-yellow-400" : "bg-white"
             }`}
             // aria-label={Go to slide ${index + 1}}
           />
         ))}
       </div>
-      <div className="bg-[#595959] opacity-90 text-white absolute bottom-0 w-full py-1">
-        {/* <Container> */}
-        <div className="flex items-center gap-4">
-          <HiMiniSpeakerWave className="text-xl md:text-3xl" />
-          <Marquee className="text-xs md:text-sm">
-            প্রিয় গ্রাহক, আপনার bajilive.net এ ভিসিট করতে সমস্যা হলে, অনুগ্রহ
-            করে 112233bj.com,2211133bj.com ব্যবহার করুন, এটি আমাদের ব্যাকআপ
-            ওয়েবসাইট লিংক।
-          </Marquee>
-        </div>
-        {/* </Container> */}
-      </div>
     </Carousel>
   );
 };
-export default BannerSlider;
+export default VideoSlider;

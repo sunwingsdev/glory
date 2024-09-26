@@ -1,3 +1,4 @@
+import VideoSlider from "@/components/home/videoSlider/VideoSlider";
 import BannerSlider from "../../../components/home/bannerSlider/BannerSlider";
 import SecondaryBanner from "../../../components/home/secondaryBanner/SecondaryBanner";
 import GameCard from "../../../components/shared/gameCard/GameCard";
@@ -7,7 +8,7 @@ const Home = () => {
     <div>
       <BannerSlider />
       <div className="container mx-auto px-4 sm:px-10 lg:px-24">
-        <SecondaryBanner />
+        <SecondaryBanner image="https://jiliwin.9terawolf.com/images/babu/banner/register_banner_home.jpg" />
         <h2 className="py-2 text-[27px] font-medium">হট গেমস</h2>
         <div className="pb-10 grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-6">
           <GameCard
@@ -20,109 +21,135 @@ const Home = () => {
           />
           <GameCard
             gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/134_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
+            gameHeading={"Mega Ace"}
+            gameText={"JILI"}
           />
           <GameCard
             gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
+              "https://luckmedia.link/pgs_wild_bounty_showdown/thumb.webp"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
+            gameHeading={"Wild Bounty"}
+            gameText={"PG SOFT"}
           />
           <GameCard
             gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
+              "https://luckmedia.link/hbn_laughing_buddha/thumb.webp"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
+            gameHeading={"Laughing Buddha"}
+            gameText={"HABANERO"}
           />
           <GameCard
             gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
+              "https://luckmedia.link/hbn_mystic_fortune_deluxe/thumb.webp"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
+            gameHeading={"Mystic Fortune Deluxe"}
+            gameText={"HABANERO"}
           />
           <GameCard
             gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/134_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
+            gameHeading={"Mega Ace"}
+            gameText={"JILI"}
           />
           <GameCard
             gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
+              "https://jiliwin.9terawolf.com/cms/h8/image/669f794e9a160.png"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
+            gameHeading={"Money Coming Expand Bets"}
+            gameText={"JILI"}
           />
           <GameCard
             gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
+              "https://jiliwin.9terawolf.com/images/babu/game_icons/en/jili/51_0.jpg"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
+            gameHeading={"Money Coming"}
+            gameText={"JILI"}
           />
           <GameCard
             gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
+              "https://jiliwin.9terawolf.com/cms/h8/image/6683b58672ad5.png"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
+            gameHeading={"Super Ace Deluxe"}
+            gameText={"JILI"}
           />
           <GameCard
             gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
+              "https://jiliwin.9terawolf.com/cms/h8/image/64a539ee6739e.png"
             }
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
+            gameHeading={"Fortune Gems 2"}
+            gameText={"JILI"}
+          />
+          <GameCard
+            gameCardImg={"https://luckmedia.link/evo_crazy_time/thumb.webp"}
+            gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
+            gameHeading={"Crazy Time"}
             gameText={"EVOLUTION GAMING"}
           />
           <GameCard
-            gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
-            }
+            gameCardImg={"https://luckmedia.link/evo_funky_time/thumb.webp"}
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
+            gameHeading={"Evo Funky Time"}
             gameText={"EVOLUTION GAMING"}
           />
           <GameCard
-            gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
-            }
+            gameCardImg={"https://luckmedia.link/spb_aviator/thumb.webp"}
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
+            gameHeading={"Aviator"}
+            gameText={"SPRIBE"}
           />
           <GameCard
-            gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
-            }
+            gameCardImg={"https://luckmedia.link/avx_nft_aviatrix/thumb.webp"}
             gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
-          />
-          <GameCard
-            gameCardImg={
-              "https://luckmedia.link/evo_lightning_storm/thumb.webp"
-            }
-            gameHot={"https://www.babu88.app/static/image/other/hot-icon.png"}
-            gameHeading={"Lightning Storm"}
-            gameText={"EVOLUTION GAMING"}
+            gameHeading={"NFT Aviatrix"}
+            gameText={"AVIATRIX"}
           />
         </div>
+        <div className="pb-4 md:pb-0">
+          <VideoSlider />
+        </div>
+        <div className="py-0 md:py-4 lg:py-8 flex flex-col lg:flex-row gap-6">
+          <div className="relative">
+            <img
+              className="h-52 object-fill rounded-2xl overflow-hidden"
+              src="https://www.babu88.app/static/image/homepage/refer_banner.jpg"
+              alt=""
+            />
+            <div className="text-white absolute top-0 p-4 space-y-3 max-w-96">
+              <h2 className="text-xl font-semibold">
+                Refer friends and start earning
+              </h2>
+              <p className="text-sm">
+                The No.1 friend referral program in Bangladesh is here! Earn
+                free ৳500 when your refer a friend and also earn lifetime
+                commission of up to 2% for every deposit your friend makes!
+              </p>
+            </div>
+            <button className="absolute bottom-6 left-10 px-4 py-1 text-lg font-bold text-black bg-yellow-400 hover:bg-yellow-600 rounded-full transition-all duration-500">
+              Refer Now
+            </button>
+          </div>
+          <img
+            className="w-full lg:max-w-96 object-fill rounded-2xl overflow-hidden"
+            src="https://www.babu88.app/static/image/homepage/bb88_bp_1400_560.jpg"
+            alt=""
+          />
+        </div>
+        <SecondaryBanner
+          zipFile={"/babu88.apk"}
+          image="https://www.babu88.app/static/image/banner/downloadClient/bdt/bd_bb88_downloadnow_appbanner_desktop.jpg"
+        />
       </div>
     </div>
   );

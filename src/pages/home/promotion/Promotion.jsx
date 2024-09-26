@@ -1,5 +1,6 @@
 import Button from "@/components/shared/button/Button";
 import OfferCard from "@/components/shared/offerCard/OfferCard";
+import RouteChange from "@/components/shared/routeChange/RouteChange";
 
 const Promotion = () => {
   const buttons = [
@@ -89,13 +90,15 @@ const Promotion = () => {
   ];
   return (
     <div>
+      {/* mobile slide menu */}
+      <RouteChange text={"প্রমোশন"} />
       <div className="container mx-auto px-4 sm:px-10 lg:px-24">
-        <div className="flex gap-1 xl:gap-2 mt-6 p-2 bg-slate-100 lg:overflow-hidden overflow-x-auto">
+        <div className="flex gap-1 xl:gap-2 mt-2 md:mt-6 p-2 bg-slate-100 lg:overflow-hidden overflow-x-auto">
           {buttons.map((button) => (
             <Button key={button.textName} nameText={button.textName} />
           ))}
         </div>
-        <div className="py-10 grid gap-4 md:gap-6 lg:gap-8 grid-cols-1 md:grid-cols-2">
+        <div className="py-2 md:py-10 grid gap-4 md:gap-6 lg:gap-8 grid-cols-1 md:grid-cols-2">
           {offers.map((offer) => (
             <OfferCard
               key={offer.image}
