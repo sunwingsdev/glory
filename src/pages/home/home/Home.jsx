@@ -119,7 +119,15 @@ const Home = () => {
         <div className="pb-4 md:pb-0">
           <VideoSlider />
         </div>
-        <div className="py-0 md:py-4 lg:py-8 flex flex-col lg:flex-row gap-6">
+        <h2 className="block md:hidden pt-3 pb-1 text-base font-semibold text-gray-800">
+          প্রচার
+        </h2>
+        <img
+          className="md:hidden rounded-2xl"
+          src="https://www.babu88.app/static/image/banner/referral/mobile_BDT_bd.jpg"
+          alt=""
+        />
+        <div className="hidden py-0 md:py-4 lg:py-8 md:flex flex-col lg:flex-row gap-6">
           <div className="relative">
             <img
               className="h-52 object-fill rounded-2xl overflow-hidden"
@@ -146,9 +154,13 @@ const Home = () => {
             alt=""
           />
         </div>
+        <h2 className="block md:hidden pt-3 pb-1 text-base font-semibold text-gray-800">
+          ডাউনলোড করুন
+        </h2>
         <SecondaryBanner
           zipFile={"/babu88.apk"}
           image="https://www.babu88.app/static/image/banner/downloadClient/bdt/bd_bb88_downloadnow_appbanner_desktop.jpg"
+          imageMobil="https://www.babu88.app/static/image/banner/downloadClient/bdt/bb88_downloadnow_appbanner_mobile.jpg"
         />
       </div>
     </div>

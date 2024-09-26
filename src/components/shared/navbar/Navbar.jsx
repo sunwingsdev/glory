@@ -41,7 +41,7 @@ const Navbar = () => {
               >
                 <SheetClose asChild className="border-b-2 pb-2">
                   <div className="w-40">
-                    <Link>
+                    <Link to={"/"}>
                       <img
                         src={
                           "https://www.babu88.app/static/svg/bb88_logo_animation2.gif"
@@ -64,7 +64,7 @@ const Navbar = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to={"/promotion"}>
+                    <Link to={"/"}>
                       <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
                         <img
                           src="https://www.babu88.app/static/svg/mobileMenu/rewards.svg"
@@ -75,7 +75,7 @@ const Navbar = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to={"/promotion"}>
+                    <Link to={"/referral"}>
                       <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
                         <img
                           src="https://www.babu88.app/static/svg/mobileMenu/referAndEarn.svg"
@@ -86,7 +86,7 @@ const Navbar = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to={""}>
+                    <Link to={"/"}>
                       <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
                         <img
                           src="https://www.babu88.app/static/svg/mobileMenu/bettingPass.svg"
@@ -97,7 +97,7 @@ const Navbar = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to={""}>
+                    <Link to={"/"}>
                       <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
                         <img
                           src="https://www.babu88.app/static/svg/mobileMenu/agentAff.svg"
@@ -108,10 +108,10 @@ const Navbar = () => {
                     </Link>
                   </SheetClose>
                   <div className="border-b-2 pb-2">
-                    <p className="text-sm">Games</p>
+                    <p className="text-sm font-semibold">Games</p>
                   </div>
                   <SheetClose asChild>
-                    <Link to={"/casino"}>
+                    <Link to={"/cricket"}>
                       <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
                         <img
                           src="https://www.babu88.app/static/svg/mobileMenu/cricket.svg"
@@ -188,6 +188,48 @@ const Navbar = () => {
                       </li>
                     </Link>
                   </SheetClose>
+                  <div className="border-b-2 pb-2">
+                    <p className="text-sm font-semibold">Others</p>
+                  </div>
+                  <SheetClose asChild>
+                    <Link to={"/"}>
+                      <li
+                        onClick={handleModalOpen}
+                        className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg"
+                      >
+                        <img
+                          className="w-4"
+                          src="https://www.babu88.app/static/svg/mobileMenu/language.svg"
+                          alt=""
+                        />
+                        ভাষা
+                      </li>
+                    </Link>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Link to={"/"}>
+                      <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
+                        <img
+                          className="w-4"
+                          src="https://www.babu88.app/static/svg/mobileMenu/faq.svg"
+                          alt=""
+                        />
+                        প্রায়শই জিজ্ঞাসিত প্রশ্নাবল
+                      </li>
+                    </Link>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Link to={"./babu88.apk"} target={"_blank"} download>
+                      <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
+                        <img
+                          className="w-4"
+                          src="https://www.babu88.app/static/svg/mobileMenu/downloadApp.svg"
+                          alt=""
+                        />
+                        ডাউনলোড করুন
+                      </li>
+                    </Link>
+                  </SheetClose>
                   {/* Add other menu items as needed */}
                 </ul>
               </SheetContent>
@@ -196,7 +238,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="w-52 sm:w-56 md:w-72">
-            <Link>
+            <Link to={"/"}>
               <img
                 src={
                   "https://www.babu88.app/static/svg/bb88_logo_animation2.gif"

@@ -75,8 +75,8 @@ const BannerSlider = () => {
       <CarouselContent>
         {bannerImages.map((image) => (
           <CarouselItem key={image.id}>
-            <div className="">
-              <img src={image.image} />
+            <div className="h-44 sm:h-60 md:h-72">
+              <img className="h-full" src={image.image} />
             </div>
           </CarouselItem>
         ))}
