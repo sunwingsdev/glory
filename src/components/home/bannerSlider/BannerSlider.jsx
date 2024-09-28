@@ -75,7 +75,7 @@ const BannerSlider = () => {
       <CarouselContent>
         {bannerImages.map((image) => (
           <CarouselItem key={image.id}>
-            <div className="h-44 sm:h-60 md:h-72">
+            <div className="h-36 sm:h-60 md:h-72 object-center">
               <img className="h-full" src={image.image} />
             </div>
           </CarouselItem>
@@ -95,7 +95,7 @@ const BannerSlider = () => {
           />
         ))}
       </div>
-      <div className="bg-[#595959] opacity-90 text-white absolute bottom-0 w-full py-1">
+      <div className="bg-[#595959] opacity-90 text-white absolute -bottom-7 md:bottom-0 w-full py-1">
         {/* <Container> */}
         <div className="flex items-center gap-4">
           <HiMiniSpeakerWave className="text-xl md:text-3xl" />

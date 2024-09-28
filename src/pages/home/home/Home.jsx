@@ -2,15 +2,69 @@ import VideoSlider from "@/components/home/videoSlider/VideoSlider";
 import BannerSlider from "../../../components/home/bannerSlider/BannerSlider";
 import SecondaryBanner from "../../../components/home/secondaryBanner/SecondaryBanner";
 import GameCard from "../../../components/shared/gameCard/GameCard";
+import HomeMobileButton from "@/components/home/homeMobilButton/HomeMobileButton";
 
 const Home = () => {
+  const buttons = [
+    {
+      image: "https://www.babu88.app/static/svg/gameTabHolder/homepageHot.svg",
+
+      title: "হট গেমস",
+    },
+    {
+      image: "https://www.babu88.app/static/svg/gameTabHolder/cricket.svg",
+
+      title: "ক্রিকেট",
+    },
+    {
+      image: "https://www.babu88.app/static/svg/gameTabHolder/ld.svg",
+
+      title: "ক্যাসিনো",
+    },
+    {
+      image: "https://www.babu88.app/static/svg/gameTabHolder/rng.svg",
+
+      title: "স্লট",
+    },
+    {
+      image: "https://www.babu88.app/static/svg/gameTabHolder/table.svg",
+
+      title: "টেবিল খেলা",
+    },
+    {
+      image: "https://www.babu88.app/static/svg/gameTabHolder/sb.svg",
+
+      title: "এসবি",
+    },
+    {
+      image: "https://www.babu88.app/static/svg/gameTabHolder/fishing.svg",
+
+      title: "মাছ ধরা",
+    },
+    {
+      image: "https://www.babu88.app/static/svg/gameTabHolder/crash.svg",
+
+      title: "ক্র্যাশ",
+    },
+  ];
   return (
     <div>
       <BannerSlider />
-      <div className="container mx-auto px-4 sm:px-10 lg:px-24">
+      <div className="container mx-auto mt-6 md:mt-0 px-4 sm:px-10 lg:px-24">
         <SecondaryBanner image="https://jiliwin.9terawolf.com/images/babu/banner/register_banner_home.jpg" />
-        <h2 className="py-2 text-[27px] font-medium">হট গেমস</h2>
-        <div className="pb-10 grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-6">
+        <div className="md:hidden py-2 flex gap-3 overflow-x-auto">
+          {buttons.map((button) => (
+            <HomeMobileButton
+              key={button.image}
+              image={button.image}
+              title={button.title}
+            />
+          ))}
+        </div>
+        <h2 className="hidden md:block py-2 text-[27px] font-medium">
+          হট গেমস
+        </h2>
+        <div className="mt-3 md:mt-0 pb-10 grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-6">
           <GameCard
             gameCardImg={
               "https://luckmedia.link/evo_lightning_storm/thumb.webp"
@@ -119,7 +173,7 @@ const Home = () => {
         <div className="pb-4 md:pb-0">
           <VideoSlider />
         </div>
-        <h2 className="block md:hidden pt-3 pb-1 text-base font-semibold text-gray-800">
+        <h2 className="block md:hidden pt-4 pb-1 text-base font-semibold text-gray-800">
           প্রচার
         </h2>
         <img
@@ -154,7 +208,7 @@ const Home = () => {
             alt=""
           />
         </div>
-        <h2 className="block md:hidden pt-3 pb-1 text-base font-semibold text-gray-800">
+        <h2 className="block md:hidden pt-4 pb-1 text-base font-semibold text-gray-800">
           ডাউনলোড করুন
         </h2>
         <SecondaryBanner
