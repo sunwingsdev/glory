@@ -75,17 +75,6 @@ const Navbar = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to={"/referral"}>
-                      <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
-                        <img
-                          src="https://www.babu88.app/static/svg/mobileMenu/referAndEarn.svg"
-                          alt=""
-                        />
-                        রেফারেল প্রোগ্রাম
-                      </li>
-                    </Link>
-                  </SheetClose>
-                  <SheetClose asChild>
                     <Link to={"/"}>
                       <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
                         <img
@@ -93,17 +82,6 @@ const Navbar = () => {
                           alt=""
                         />
                         বেটিং পাস
-                      </li>
-                    </Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link to={"/"}>
-                      <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
-                        <img
-                          src="https://www.babu88.app/static/svg/mobileMenu/agentAff.svg"
-                          alt=""
-                        />
-                        অধিভুক্ত
                       </li>
                     </Link>
                   </SheetClose>
