@@ -12,6 +12,9 @@ import Crash from "@/pages/home/crash/Crash";
 import Promotion from "@/pages/home/promotion/Promotion";
 import Referral from "@/pages/home/referral/Referral";
 import Cricket from "@/pages/home/cricket/Cricket";
+import BettingPass from "@/pages/home/bettingPass/BettingPass";
+import MegaMenu from "@/components/shared/megaMenu/MegaMenu";
+import Faq from "@/pages/home/faq/Faq";
 
 const router = createBrowserRouter([
   {
@@ -59,12 +62,24 @@ const router = createBrowserRouter([
         element: <Crash />,
       },
       {
+        path: "/betting-pass",
+        element: <BettingPass />,
+      },
+      {
         path: "/promotion",
         element: <Promotion />,
       },
       {
         path: "/referral",
         element: <Referral />,
+      },
+      {
+        path: "/mega-menu",
+        element: <MegaMenu />,
+      },
+      {
+        path: "/faq",
+        element: <Faq />,
       },
     ],
   },

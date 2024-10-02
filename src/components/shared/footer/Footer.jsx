@@ -72,7 +72,7 @@ const Footer = () => {
             <p className="text-sm sm:text-base mb-4 text-black md:text-white">
               প্রত্যয়িত বই
             </p>
-            <Link target="_blank">
+            <Link to={"/"} target="_blank">
               <img
                 className="w-40 md:w-44 lg:w-52"
                 src={

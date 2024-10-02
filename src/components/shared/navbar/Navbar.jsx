@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaCaretDown } from "react-icons/fa";
-import { IoMenuOutline } from "react-icons/io5";
+import { IoHome, IoMenuOutline } from "react-icons/io5";
 import { useState } from "react";
 import Modal from "../modal/Modal";
 import {
@@ -9,10 +9,199 @@ import {
   SheetContent,
   SheetClose,
 } from "@/components/ui/sheet"; // Shadcn sheet
+import MegaMenu from "../megaMenu/MegaMenu";
 
 const Navbar = () => {
+  // cricket
+  const megaMenuCricket = [
+    {
+      route: "/cricket",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/cricket/betswiz_new.png",
+    },
+    {
+      route: "/cricket",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/cricket/sap_new.png",
+    },
+  ];
+  // casino
+  const megaMenuCasino = [
+    {
+      route: "/casino",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/ld/evo_new.png",
+    },
+    {
+      route: "/casino",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/ld/pp_new.png",
+    },
+    {
+      route: "/casino",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/ld/sexy_v2_new.png",
+    },
+    {
+      route: "/casino",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/ld/royal_new.png",
+    },
+    {
+      route: "/casino",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/ld/ezugi_new.png",
+    },
+    {
+      route: "/casino",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/ld/pt_new.png",
+    },
+    {
+      route: "/casino",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/ld/aura_new.png",
+    },
+  ];
+  // slot
+  const megaMenuSlot = [
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/jili_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/pp_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/haba_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/pg_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/spg_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/pt_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/rt_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/png_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/smart_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/jdb_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/one_new.png",
+    },
+    {
+      route: "/slot",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/rng/netent_new.png",
+    },
+    {
+      route: "/slot",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/rng/nolimit_new.png",
+    },
+    {
+      route: "/slot",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/rng/relax_new.png",
+    },
+    {
+      route: "/slot",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/rng/booongo_new.png",
+    },
+  ];
+  // table-games
+  const megaMenuTable = [
+    {
+      route: "/table-games",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/table/jili_new.png",
+    },
+    {
+      route: "/table-games",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/table/sexy_v2_new.png",
+    },
+    {
+      route: "/table-games",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/table/spg_new.png",
+    },
+  ];
+  // sport
+  const megaMenuSportBook = [
+    {
+      route: "/sports-book",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/sb/ibc_new.png",
+    },
+  ];
+  // fishing
+  const megaMenuFishing = [
+    {
+      route: "/fishing",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/fishing/jili_new.png",
+    },
+    {
+      route: "/fishing",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/fishing/spg_new.png",
+    },
+  ];
+  // Crash
+  const megaMenuCrash = [
+    {
+      route: "/crash",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/crash/aviatrix_new.png",
+    },
+    {
+      route: "/crash",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/crash/jili_new.png",
+    },
+    {
+      route: "/crash",
+      image: "https://jiliwin.9terawolf.com/images/babu/menu/crash/pp_new.png",
+    },
+    {
+      route: "/crash",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/crash/spribe_new.png",
+    },
+    {
+      route: "/crash",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/crash/smart_new.png",
+    },
+    {
+      route: "/crash",
+      image:
+        "https://jiliwin.9terawolf.com/images/babu/menu/crash/bslt_new.png",
+    },
+  ];
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false); // State for hover
+  const [isCasinoHovered, setIsCasinoHovered] = useState(false);
+  const [isSlotHovered, setIsSlotHovered] = useState(false);
+  const [isTableHovered, setIsTableHovered] = useState(false);
+  const [isSportHovered, setIsSportHovered] = useState(false);
+  const [isFishingHovered, setIsFishingHovered] = useState(false);
+  const [isCrashHovered, setIsCrashHovered] = useState(false);
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -23,7 +212,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className="z-20">
       {/* Start top navbar */}
       <div className="container mx-auto px-4 py-2">
         <div className="flex justify-between items-center">
@@ -75,7 +264,7 @@ const Navbar = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to={"/"}>
+                    <Link to={"/betting-pass"}>
                       <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
                         <img
                           src="https://www.babu88.app/static/svg/mobileMenu/bettingPass.svg"
@@ -185,7 +374,7 @@ const Navbar = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to={"/"}>
+                    <Link to={"/faq"}>
                       <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
                         <img
                           className="w-4"
@@ -265,67 +454,217 @@ const Navbar = () => {
       </div>
 
       {/* Bottom navbar */}
-      <div className="bg-[#333] md:flex hidden">
+      <div className="bg-[#333] md:flex hidden relative">
         <div className="container mx-auto px-4">
-          <div className="">
-            <ul className="flex overflow-x-auto">
-              <Link to={"/cricket"}>
-                <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  ক্রিকেট
-                </li>
-              </Link>
-              <Link to={"/casino"}>
-                <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  ক্যাসিনো
-                </li>
-              </Link>
-              <Link to={"/slot"}>
-                <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  স্লট গেম
-                </li>
-              </Link>
-              <Link to={"/table-games"}>
-                <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  টেবিল গেম
-                </li>
-              </Link>
-              <Link to={"/sports-book"}>
-                <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  খেলার বই
-                </li>
-              </Link>
-              <Link to={"/fishing"}>
-                <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  মাছ ধরা
-                </li>
-              </Link>
-              <Link to={"/crash"}>
-                <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  ক্র্যাশ
-                </li>
-              </Link>
-              <Link to={"/promotion"}>
-                <li className="px-5 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  প্রমোশন
-                </li>
-              </Link>
-              <Link>
-                <li className="px-4 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  বেটিং পাস
-                </li>
-              </Link>
-              <Link to={"/referral"}>
-                <li className="px-4 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  সুপারিশ
-                </li>
-              </Link>
-              <Link>
-                <li className="px-4 py-4 text-sm whitespace-nowrap lg:text-base font-semibold text-white hover:text-[#FFCD03] hover:bg-[#424242] transition-all duration-500">
-                  পুরস্কার
-                </li>
-              </Link>
-            </ul>
-          </div>
+          <ul className="flex overflow-x-auto">
+            {/* single menu */}
+            <NavLink
+              to={"/"}
+              className="text-sm font-semibold flex items-center gap-1 justify-center py-3 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+            >
+              <p className="py-1 px-5 border-r-[1px]">
+                <IoHome size={20} />
+              </p>
+            </NavLink>
+
+            {/* single cricket menu */}
+            <div
+              className=""
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <NavLink
+                to={"/cricket"}
+                className="text-sm font-semibold flex items-center gap-1 justify-center px-5 py-4 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+              >
+                <p>ক্রিকেট</p>
+              </NavLink>
+              {/* MegaMenu */}
+              <div
+                className={`absolute left-0 top-full w-full bg-[#313131] z-20 text-black p-5 transform transition-transform duration-300 ease-in-out ${
+                  isHovered
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-10 opacity-0 pointer-events-none"
+                }`}
+              >
+                <MegaMenu items={megaMenuCricket} />
+              </div>
+            </div>
+
+            {/* single casino menu */}
+            <div
+              className=""
+              onMouseEnter={() => setIsCasinoHovered(true)}
+              onMouseLeave={() => setIsCasinoHovered(false)}
+            >
+              <NavLink
+                to={"/casino"}
+                className="text-sm font-semibold flex items-center gap-1 justify-center px-5 py-4 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+              >
+                <p>ক্যাসিনো</p>
+              </NavLink>
+              {/* MegaMenu */}
+              <div
+                className={`absolute left-0 top-full w-full bg-[#313131] z-20 text-black p-5 transform transition-transform duration-300 ease-in-out ${
+                  isCasinoHovered
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-10 opacity-0 pointer-events-none"
+                }`}
+              >
+                <div className="">
+                  <MegaMenu items={megaMenuCasino} />
+                </div>
+              </div>
+            </div>
+
+            {/* single slot menu */}
+            <div
+              className=""
+              onMouseEnter={() => setIsSlotHovered(true)}
+              onMouseLeave={() => setIsSlotHovered(false)}
+            >
+              <NavLink
+                to={"/slot"}
+                className="text-sm font-semibold flex items-center gap-1 justify-center px-5 py-4 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+              >
+                <p>স্লট গেম</p>
+              </NavLink>
+              {/* MegaMenu */}
+              <div
+                className={`absolute left-0 top-full w-full bg-[#313131] z-20 text-black p-5 transform transition-transform duration-300 ease-in-out ${
+                  isSlotHovered
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-10 opacity-0 pointer-events-none"
+                }`}
+              >
+                <div className="">
+                  <MegaMenu items={megaMenuSlot} />
+                </div>
+              </div>
+            </div>
+
+            {/* single table game menu */}
+            <div
+              className=""
+              onMouseEnter={() => setIsTableHovered(true)}
+              onMouseLeave={() => setIsTableHovered(false)}
+            >
+              <NavLink
+                to={"/table-games"}
+                className="text-sm font-semibold flex items-center gap-1 justify-center px-5 py-4 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+              >
+                <p>টেবিল গেম</p>
+              </NavLink>
+              {/* MegaMenu */}
+              <div
+                className={`absolute left-0 top-full w-full bg-[#313131] z-20 text-black p-5 transform transition-transform duration-300 ease-in-out ${
+                  isTableHovered
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-10 opacity-0 pointer-events-none"
+                }`}
+              >
+                <MegaMenu items={megaMenuTable} />
+              </div>
+            </div>
+
+            {/* single sports-book menu */}
+            <div
+              className=""
+              onMouseEnter={() => setIsSportHovered(true)}
+              onMouseLeave={() => setIsSportHovered(false)}
+            >
+              <NavLink
+                to={"/sports-book"}
+                className="text-sm font-semibold flex items-center gap-1 justify-center px-5 py-4 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+              >
+                <p>খেলার বই</p>
+              </NavLink>
+              {/* MegaMenu */}
+              <div
+                className={`absolute left-0 top-full w-full bg-[#313131] z-20 text-black p-5 transform transition-transform duration-300 ease-in-out ${
+                  isSportHovered
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-10 opacity-0 pointer-events-none"
+                }`}
+              >
+                <MegaMenu items={megaMenuSportBook} />
+              </div>
+            </div>
+
+            {/* single fishing menu */}
+            <div
+              className=""
+              onMouseEnter={() => setIsFishingHovered(true)}
+              onMouseLeave={() => setIsFishingHovered(false)}
+            >
+              <NavLink
+                to={"/sports-book"}
+                className="text-sm font-semibold flex items-center gap-1 justify-center px-5 py-4 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+              >
+                <p>মাছ ধরা</p>
+              </NavLink>
+              {/* MegaMenu */}
+              <div
+                className={`absolute left-0 top-full w-full bg-[#313131] z-20 text-black p-5 transform transition-transform duration-300 ease-in-out ${
+                  isFishingHovered
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-10 opacity-0 pointer-events-none"
+                }`}
+              >
+                <MegaMenu items={megaMenuFishing} />
+              </div>
+            </div>
+
+            {/* single Crash menu */}
+            <div
+              className=""
+              onMouseEnter={() => setIsCrashHovered(true)}
+              onMouseLeave={() => setIsCrashHovered(false)}
+            >
+              <NavLink
+                to={"/crash"}
+                className="text-sm font-semibold flex items-center gap-1 justify-center px-5 py-4 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+              >
+                <p>ক্র্যাশ</p>
+              </NavLink>
+              {/* MegaMenu */}
+              <div
+                className={`absolute left-0 top-full w-full bg-[#313131] z-20 text-black p-5 transform transition-transform duration-300 ease-in-out ${
+                  isCrashHovered
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-10 opacity-0 pointer-events-none"
+                }`}
+              >
+                <MegaMenu items={megaMenuCrash} />
+              </div>
+            </div>
+
+            {/* single promotion menu */}
+            <NavLink
+              to={"/promotion"}
+              className="text-sm font-semibold flex items-center gap-1 justify-center px-5 py-4 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+            >
+              <p>প্রমোশন</p>
+            </NavLink>
+
+            {/* single betting-pass menu */}
+            <NavLink
+              to={"/betting-pass"}
+              className="text-sm font-semibold flex items-center gap-1 justify-center px-5 py-4 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+            >
+              <p>বেটিং পাস</p>
+            </NavLink>
+
+            {/* single referral menu */}
+            <NavLink
+              to={"/referral"}
+              className="text-sm font-semibold flex items-center gap-1 justify-center px-5 py-4 text-white hover:text-[#FFCD03] hover:bg-[#424242] border-b-[4px] border-b-[#333] hover:border-b-[4px] hover:border-b-[#ffb300] transition-colors duration-200 ease-linear"
+            >
+              <p>সুপারিশ</p>
+            </NavLink>
+
+            {/* Add other menu items */}
+          </ul>
         </div>
       </div>
 

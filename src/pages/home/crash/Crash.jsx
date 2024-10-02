@@ -54,7 +54,7 @@ const Crash = () => {
           }
         />
         {/* mobile slide menu */}
-        <RouteChange text={"ক্যাসিনো"} />
+        <RouteChange text={"ক্র্যাশ"} />
         <GameVendorList buttons={buttons} />
         <div className="container mx-auto px-4 sm:px-10 lg:px-24">
           <div className="mt-10 pb-10 grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-6">
