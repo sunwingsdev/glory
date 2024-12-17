@@ -456,7 +456,7 @@ const Navbar = () => {
       {/* Bottom navbar */}
       <div className="bg-[#333] md:flex hidden relative">
         <div className="container mx-auto px-4">
-          <ul className="flex overflow-x-auto">
+          <ul className="flex whitespace-nowrap overflow-x-auto">
             {/* single menu */}
             <NavLink
               to={"/"}
