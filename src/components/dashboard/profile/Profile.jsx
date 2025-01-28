@@ -17,7 +17,7 @@ const topbarData = [
   { label: "সুপারিশ", route: "" },
   { label: "বেটিং পাস", route: "" },
   { label: "হুইল অফ ফরচুন", route: "" },
-  { label: "পুরস্কার", route: "" },
+  { label: "পুরস্কার", route: "/profile/rewards" },
 ];
 
 const Profile = () => {

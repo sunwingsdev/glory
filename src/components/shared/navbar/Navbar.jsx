@@ -282,7 +282,7 @@ const Navbar = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to={"/"}>
+                    <Link to={"/profile/rewards"}>
                       <li className="flex gap-4 mt-1 text-sm font-medium px-3 py-2 hover:bg-slate-200 rounded-lg">
                         <img
                           src="https://www.babu88.app/static/svg/mobileMenu/rewards.svg"

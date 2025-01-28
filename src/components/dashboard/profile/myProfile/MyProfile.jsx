@@ -45,7 +45,7 @@ const MyProfile = () => {
 
   return (
     <div className="p-4 lg:p-6 bg-white rounded-lg">
-      <form action="" className="space-y-4">
+      <form action="" className="space-y-4 w-full lg:w-[500px]">
         {/* প্রোফাইল তথ্য */}
         <div className="flex items-center gap-6">
           <h1 className="text-base font-semibold">আমার প্রোফাইল</h1>

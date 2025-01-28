@@ -21,6 +21,7 @@ import Inbox from "@/components/dashboard/profile/inbox/Inbox";
 import Deposit from "@/components/dashboard/profile/deposit/Deposit";
 import Withdrawal from "@/components/dashboard/profile/deposit/Withdrawal";
 import Voucher from "@/components/dashboard/profile/deposit/Voucher";
+import Rewards from "@/components/dashboard/profile/rewards/Rewards";
 
 const router = createBrowserRouter([
   {
@@ -110,6 +111,10 @@ const router = createBrowserRouter([
           {
             path: "voucher",
             element: <Voucher />,
+          },
+          {
+            path: "rewards",
+            element: <Rewards />,
           },
         ],
       },
