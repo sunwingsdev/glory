@@ -515,6 +515,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       {/* Bottom navbar */}
       <div className="bg-[#333] md:flex hidden relative">
         <div className="container mx-auto px-4">

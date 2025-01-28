@@ -30,7 +30,19 @@ const Deposit = () => {
   return (
     <div className="flex gap-4">
       <div className="w-full p-3 sm:p-4 lg:p-6 bg-white rounded-lg space-y-4">
-        <h1 className="text-lg font-semibold">আমানত</h1>
+        <h1 className="text-lg font-semibold hidden md:block">আমানত</h1>
+        <div className="grid grid-cols-2 bg-gray-700 rounded-t-xl md:hidden">
+          <Link to={"/profile/deposit"}>
+            <div className="w-full p-2 text-yellow-300 text-center border-b-4 border-yellow-400">
+              আমানত
+            </div>
+          </Link>
+          <Link to={"/profile/withdrawal"}>
+            <div className="w-full p-2 text-yellow-300 text-center">
+              উত্তোলন
+            </div>
+          </Link>
+        </div>
 
         <div className="space-y-2">
           <h2 className="text-base">
