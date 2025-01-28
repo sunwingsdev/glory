@@ -195,6 +195,33 @@ const Navbar = () => {
     },
   ];
 
+  {
+    /* মডাল ডেটা */
+  }
+  const modalData = [
+    {
+      id: 1,
+      currency: "BDT",
+      currencySymbol: "৳",
+      flagSrc: "https://www.babu88.app/static/image/country/BDT.svg",
+      languages: ["ENGLISH", "BENGALI"],
+    },
+    {
+      id: 2,
+      currency: "INR",
+      currencySymbol: "₹",
+      flagSrc: "https://www.babu88.app/static/image/country/INR.svg",
+      languages: ["ENGLISH", "HINDI"],
+    },
+    {
+      id: 3,
+      currency: "NPR",
+      currencySymbol: "₨",
+      flagSrc: "https://www.babu88.app/static/image/country/NPR.svg",
+      languages: ["ENGLISH", "NEPALESE"],
+    },
+  ];
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false); // State for hover
@@ -488,7 +515,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       {/* Bottom navbar */}
       <div className="bg-[#333] md:flex hidden relative">
         <div className="container mx-auto px-4">
@@ -704,67 +730,33 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* মডাল */}
       <Modal
         isOpen={isModalOpen}
         onOpenChange={handleModalClose}
         title={"Currency and Language"}
       >
         <div className="space-y-4">
-          <div className="flex gap-2 md:gap-6">
-            <div className="flex items-center gap-1 md:gap-2 w-full">
-              <img
-                className="w-10"
-                src="https://www.babu88.app/static/image/country/BDT.svg"
-                alt="BDT"
-              />
-              <p className="text-sm md:text-base font-semibold text-gray-400">
-                ৳ BDT
-              </p>
+          {modalData.map((item) => (
+            <div key={item.id} className="flex gap-2 md:gap-6">
+              {/* মুদ্রা তথ্য */}
+              <div className="flex items-center gap-1 md:gap-2 w-full">
+                <img className="w-10" src={item.flagSrc} alt={item.currency} />
+                <p className="text-sm md:text-base font-semibold text-gray-400">
+                  {item.currencySymbol} {item.currency}
+                </p>
+              </div>
+              {/* ভাষা বাটন */}
+              {item.languages.map((language) => (
+                <button
+                  key={language}
+                  className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded"
+                >
+                  {language}
+                </button>
+              ))}
             </div>
-            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
-              ENGLISH
-            </button>
-            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
-              BENGALI
-            </button>
-          </div>
-          <div className="flex gap-2 md:gap-6">
-            <div className="flex items-center gap-1 md:gap-2 w-full">
-              <img
-                className="w-10"
-                src="https://www.babu88.app/static/image/country/INR.svg"
-                alt=""
-              />
-              <p className="text-sm md:text-base font-semibold text-gray-400">
-                ৳ INR
-              </p>
-            </div>
-            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
-              ENGLISH
-            </button>
-            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
-              HINDI
-            </button>
-          </div>
-          <div className="flex gap-2 md:gap-6">
-            <div className="flex items-center gap-1 md:gap-2 w-full">
-              <img
-                className="w-10"
-                src="https://www.babu88.app/static/image/country/NPR.svg"
-                alt=""
-              />
-              <p className="text-sm md:text-base font-semibold text-gray-400">
-                ৳ NPR
-              </p>
-            </div>
-            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
-              ENGLISH
-            </button>
-            <button className="w-full px-3 py-2 text-sm md:text-base font-semibold text-gray-500 hover:text-yellow-300 hover:bg-red-50 border border-gray-300 rounded">
-              NEPALESE
-            </button>
-          </div>
+          ))}
         </div>
       </Modal>
     </div>
