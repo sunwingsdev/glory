@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaCaretDown } from "react-icons/fa";
+import { FaCaretDown, FaPlus, FaUser } from "react-icons/fa";
+import { IoMdNotifications } from "react-icons/io";
+import { TbCurrencyTaka } from "react-icons/tb";
 import { IoHome, IoMenuOutline } from "react-icons/io5";
 import { useState } from "react";
 import Modal from "../modal/Modal";
@@ -415,9 +417,9 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex items-center gap-3">
             {/* Sign up */}
-            <ul className="md:flex items-center gap-4 hidden">
+            {/* <ul className="md:flex items-center gap-4 hidden">
               <Link to={"/login"}>
                 <li className="text-sm font-semibold px-3 py-2 rounded-lg bg-[#FFCD03] hover:bg-[#e5be22] transition-all duration-500">
                   প্রবেশ করুন
@@ -428,7 +430,41 @@ const Navbar = () => {
                   এখনি যোগদিন
                 </li>
               </Link>
-            </ul>
+            </ul> */}
+
+            {/* dashboard */}
+            <div className="md:flex justify-center items-center gap-3 hidden">
+              <div className="flex justify-center items-center gap-2 lg:gap-3">
+                <p className="text-lg font-bold">vismo</p>
+                <Link to={"/profile"}>
+                  <div className="flex justify-center items-center p-3 text-base lg:text-xl bg-yellow-400 hover:bg-yellow-500 duration-300 rounded-full">
+                    <FaUser />
+                  </div>
+                </Link>
+                <Link to={"/profile/inbox"} className="relative">
+                  <div className="flex justify-center items-center p-2.5 text-xl lg:text-2xl bg-yellow-400 hover:bg-yellow-500 duration-300 rounded-full">
+                    <IoMdNotifications />
+                  </div>
+                  <div className="absolute -top-1 -right-1 flex justify-center items-center w-5 h-5 text-xs text-white bg-blue-500 rounded-full">
+                    58
+                  </div>
+                </Link>
+                <div className="w-1 h-10 border-r border-gray-400"></div>
+              </div>
+              <div className="flex gap-2 items-center pl-4 rounded-full bg-gray-200">
+                <Link>
+                  <div className="flex items-center text-xl lg:text-2xl">
+                    <TbCurrencyTaka />
+                    <p>*.**</p>
+                  </div>
+                </Link>
+                <Link to={"/profile/deposit"}>
+                  <div className="flex justify-center items-center p-2.5 text-xl lg:text-2xl text-white bg-blue-500 hover:bg-blue-600 duration-300 rounded-full">
+                    <FaPlus />
+                  </div>
+                </Link>
+              </div>
+            </div>
 
             {/* Language */}
             <ul>
