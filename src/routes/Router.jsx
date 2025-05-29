@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       },
       { path: "/LiveCasino", element: <LiveCasino /> },
       { path: "/tournaments", element: <Tournaments /> },
-      { path: "/gloryGame", element: <Glory /> },
+      { path: "/gloryGame", element: <Glory /> }, 
     ],
   },
   {
