@@ -1,27 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/home/home/Home";
-import Login from "../pages/login/Login";
-import Registration from "../pages/registration/Registration";
-import Casino from "../pages/home/casino/Casino";
-import Slot from "../pages/home/slot/Slot";
-import TableGames from "@/pages/home/tableGames/TableGames";
-import SportsBook from "@/pages/home/sportsBook/SportsBook";
-import Fishing from "@/pages/home/fishing/Fishing";
-import Crash from "@/pages/home/crash/Crash";
-import Promotion from "@/pages/home/promotion/Promotion";
-import Referral from "@/pages/home/referral/Referral";
-import Cricket from "@/pages/home/cricket/Cricket";
-import BettingPass from "@/pages/home/bettingPass/BettingPass";
-import MegaMenu from "@/components/shared/megaMenu/MegaMenu";
-import Faq from "@/pages/home/faq/Faq";
-import Profile from "@/components/dashboard/profile/Profile";
-import MyProfile from "@/components/dashboard/profile/myProfile/MyProfile";
-import Inbox from "@/components/dashboard/profile/inbox/Inbox";
-import Deposit from "@/components/dashboard/profile/deposit/Deposit";
-import Withdrawal from "@/components/dashboard/profile/deposit/Withdrawal";
-import Voucher from "@/components/dashboard/profile/deposit/Voucher";
-import Rewards from "@/components/dashboard/profile/rewards/Rewards";
+import LiveCasino from "@/pages/LiveCasino";
+import Glory from "@/pages/Glory";
+import Tournaments from "@/pages/Tournaments";
+import ProfileLayout from "@/layout/ProfileLayout";
+import MyProfile from "@/pages/profile/MyProfile";
+import TransactionHistory from "@/pages/profile/TransactionHistory";
+import GameHistory from "@/pages/profile/GameHistory";
+import MyBonuses from "@/pages/profile/MyBonuses";
 
 const router = createBrowserRouter([
   {
@@ -32,91 +19,30 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      { path: "/LiveCasino", element: <LiveCasino /> },
+      { path: "/tournaments", element: <Tournaments /> },
+      { path: "/gloryGame", element: <Glory /> },
+    ],
+  },
+  {
+    path: "/profile",
+    element: <ProfileLayout />,
+    children: [
       {
-        path: "/login",
-        element: <Login />,
+        path: "",
+        element: <MyProfile />,
       },
       {
-        path: "/registration",
-        element: <Registration />,
+        path: "transactions",
+        element: <TransactionHistory />,
       },
       {
-        path: "/cricket",
-        element: <Cricket />,
+        path: "gamehistory",
+        element: <GameHistory />,
       },
       {
-        path: "/casino",
-        element: <Casino />,
-      },
-      {
-        path: "/slot",
-        element: <Slot />,
-      },
-      {
-        path: "/table-games",
-        element: <TableGames />,
-      },
-      {
-        path: "/sports-book",
-        element: <SportsBook />,
-      },
-      {
-        path: "/fishing",
-        element: <Fishing />,
-      },
-      {
-        path: "/crash",
-        element: <Crash />,
-      },
-      {
-        path: "/betting-pass",
-        element: <BettingPass />,
-      },
-      {
-        path: "/promotion",
-        element: <Promotion />,
-      },
-      {
-        path: "/referral",
-        element: <Referral />,
-      },
-      {
-        path: "/mega-menu",
-        element: <MegaMenu />,
-      },
-      {
-        path: "/faq",
-        element: <Faq />,
-      },
-      {
-        path: "/profile",
-        element: <Profile />,
-        children: [
-          {
-            path: "",
-            element: <MyProfile />,
-          },
-          {
-            path: "inbox",
-            element: <Inbox />,
-          },
-          {
-            path: "deposit",
-            element: <Deposit />,
-          },
-          {
-            path: "withdrawal",
-            element: <Withdrawal />,
-          },
-          {
-            path: "voucher",
-            element: <Voucher />,
-          },
-          {
-            path: "rewards",
-            element: <Rewards />,
-          },
-        ],
+        path: "mybonuses",
+        element: <MyBonuses />,
       },
     ],
   },

@@ -1,11 +1,11 @@
+import GloryGames from "@/components/home/All Game/GloryGames";
+import BannerSlider from "@/components/home/bannerSlider/BannerSlider";
 import GameFilterBar from "@/components/home/gameCard/GameFilterBar";
-import PopularGame from "../../../components/home/All Game/PopularGame";
-import BannerSlider from "../../../components/home/bannerSlider/BannerSlider";
-import { useState } from "react";
 import Menu from "@/components/home/menu/Menu";
 import TopMenu from "@/components/home/menu/TopMenu";
+import { useState } from "react";
 
-const Home = () => {
+const Glory = () => {
   const [games, setGames] = useState([]);
   const [filteredGames, setFilteredGames] = useState([]);
 
@@ -41,9 +41,9 @@ const Home = () => {
       <BannerSlider />
       <Menu />
       <GameFilterBar onSearch={handleSearch} onSortChange={handleSortChange} />
-      <PopularGame />
+      <GloryGames />
     </div>
   );
 };
 
-export default Home;
+export default Glory;

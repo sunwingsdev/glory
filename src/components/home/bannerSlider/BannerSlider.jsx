@@ -1,113 +1,77 @@
-import { useState, useEffect } from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import { HiMiniSpeakerWave } from "react-icons/hi2";
-import Marquee from "react-fast-marquee";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+const slides = [
+  {
+    img: "https://diswdgcu9cfva.cloudfront.net/banners/glory/aviator/aviator_desktop.webp",
+    title: "ASTRONAUT",
+    subtitle: "Gain altitude and grab the big win in time!",
+    buttonText: "PLAY",
+  },
+  {
+    img: "https://diswdgcu9cfva.cloudfront.net/banners/glory/glorygames/desktop.webp",
+    title: "GLORY GAMES",
+    subtitle: "Feel the thrill of the battlefield!",
+    buttonText: "PLAY NOW",
+  },
+  {
+    img: "https://diswdgcu9cfva.cloudfront.net/banners/glory/crazycoins/desktop.webp",
+    title: "CRAZY COINS",
+    subtitle: "Collect coins in this crazy adventure!",
+    buttonText: "START",
+  },
+  {
+    img: "https://diswdgcu9cfva.cloudfront.net/banners/glory/heiststakes/desktop.webp",
+    title: "HEIST STAKES",
+    subtitle: "Risk big, win bigger!",
+    buttonText: "JOIN",
+  },
+  {
+    img: "https://diswdgcu9cfva.cloudfront.net/banners/glory/bonuses/bonuses_desktop.webp",
+    title: "BONUSES",
+    subtitle: "Unlock exciting rewards daily!",
+    buttonText: "CLAIM",
+  },
+];
 
 const BannerSlider = () => {
-  const bannerImages = [
-    {
-      id: 1,
-      image:
-        "https://jiliwin.9terawolf.com/cms/banner/image/bd-desktop-66c442ab4e9f9.jpg",
-    },
-    {
-      id: 2,
-      image:
-        "https://jiliwin.9terawolf.com/cms/banner/image/bd-desktop-66c2c5680c279.jpg",
-    },
-    {
-      id: 3,
-      image:
-        "https://jiliwin.9terawolf.com/cms/banner/image/bd-desktop-65938d6405590.jpg",
-    },
-    {
-      id: 4,
-      image:
-        "https://jiliwin.9terawolf.com/cms/banner/image/bd-desktop-669769f71da59.jpg",
-    },
-    {
-      id: 5,
-      image:
-        "https://jiliwin.9terawolf.com/cms/banner/image/bd-desktop-667e3b922437d.jpg",
-    },
-  ];
-
-  const [api, setApi] = useState(null);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  // Listen for the selected slide change
-  useEffect(() => {
-    if (!api) return;
-
-    const onSelect = () => {
-      setSelectedIndex(api.selectedScrollSnap());
-    };
-
-    api.on("select", onSelect);
-
-    return () => {
-      api.off("select", onSelect);
-    };
-  }, [api]);
-
-  // Scroll to the next slide every 2 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (api) {
-        const nextIndex = (selectedIndex + 1) % bannerImages.length;
-        api.scrollTo(nextIndex);
-      }
-    }, 3000); // 2 seconds
-
-    return () => clearInterval(interval);
-  }, [api, selectedIndex, bannerImages.length]);
-
-  const scrollTo = (index) => {
-    api?.scrollTo(index);
-  };
-
   return (
-    <Carousel className="w-full" setApi={setApi}>
-      <CarouselContent>
-        {bannerImages.map((image) => (
-          <CarouselItem key={image.id}>
-            <div className="h-36 sm:h-60 md:h-72 lg:h-full w-full object-center">
-              <img className="w-full h-full" src={image.image} />
+    <div className="pb-3 w-full max-w-5xl mx-auto rounded-xl overflow-hidden">
+      <Swiper
+        spaceBetween={10}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        modules={[Autoplay, Pagination]}
+        className="mySwiper"
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative w-full h-40 sm:h-[320px]">
+              <img
+                src={slide.img}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-cover rounded-xl overflow-hidden"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-12 text-black">
+                <h2 className="text-2xl sm:text-4xl font-bold md:mb-2">
+                  {slide.title}
+                </h2>
+                <p className="text-sm sm:text-lg mb-8 lg:mb-24">
+                  {slide.subtitle}
+                </p>
+                <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold p-2 rounded-md text-xs sm:text-base w-[50%] md:w-[30%]">
+                  {slide.buttonText}
+                </button>
+              </div>
             </div>
-          </CarouselItem>
+          </SwiperSlide>
         ))}
-      </CarouselContent>
-
-      {/* Slide Select Buttons */}
-      <div className="absolute bottom-8 md:bottom-16 right-4 md:right-[5.5rem] flex space-x-2">
-        {bannerImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => scrollTo(index)}
-            className={`size-[10px] md:size-4 rounded-full hover:bg-white transition-colors ease-in-out duration-300 ${
-              selectedIndex === index ? "bg-white" : "bg-[#12664b]"
-            }`}
-            // aria-label={Go to slide ${index + 1}}
-          />
-        ))}
-      </div>
-      <div className="bg-[#595959] opacity-90 text-white absolute -bottom-7 md:bottom-0 w-full py-1">
-        {/* <Container> */}
-        <div className="flex items-center gap-4">
-          <HiMiniSpeakerWave className="text-xl md:text-3xl" />
-          <Marquee className="text-xs md:text-sm">
-            প্রিয় গ্রাহক, আপনার bajilive.net এ ভিসিট করতে সমস্যা হলে, অনুগ্রহ
-            করে 112233bj.com,2211133bj.com ব্যবহার করুন, এটি আমাদের ব্যাকআপ
-            ওয়েবসাইট লিংক।
-          </Marquee>
-        </div>
-        {/* </Container> */}
-      </div>
-    </Carousel>
+      </Swiper>
+    </div>
   );
 };
+
 export default BannerSlider;

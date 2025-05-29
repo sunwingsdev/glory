@@ -1,195 +1,129 @@
+import { FaFacebookF, FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import logo from "../../../assets/logo/logo.svg";
+
+// Casino
+const helpLinks = [
+  { label: "Live-Dealer", link: "/liveCasino" },
+  { label: "Aviator", link: "/" },
+  { label: "Welcome Bonus", link: "/" },
+  { label: "Tournaments", link: "/tournaments" },
+];
+// Game center
+const gameLinks = [
+  { label: "Company", link: "/" },
+  { label: "T&C", link: "/" },
+  { label: "KYC & AML Policy", link: "/" },
+  { label: "Privacy & Security", link: "/" },
+  { label: "Responsible Gambling", link: "/" },
+  { label: "Cookie policy", link: "/" },
+];
+const vendorLogos = ["JL-COLOR.png", "SPB-COLOR.png"];
 
 const Footer = () => {
   return (
-    <div className="bg-[#ebebeb] md:bg-[#333] pt-8 md:pt-14">
-      <div className="container mx-auto px-4 sm:px-10 lg:px-24">
-        <div className="border-t border-teal-50 md:flex gap-4 pt-10 hidden">
-          {/* left site */}
-          <div className="text-white w-1/2">
-            <div className="max-w-[320px] space-y-5">
-              <h4 className="text-base font-semibold">
-                BABU88 | দক্ষিণ এশিয়ায় বিশ্বস্ত অনলাইন ক্যাসিনো | বাংলাদেশ,
-                ভারত, নেপালে শুধুমাত্র
-              </h4>
-              <p className="text-sm">
-                BABU88 হল একটি অনলাইন ব্যাটিং কোম্পানি, যা বিস্তৃত পরিসরে বাজি
-                এবং ক্যাসিনো বিকল্পগুলি অফার করে৷ 2021 সালে প্রতিষ্ঠিত, BABU88
-                একটি ক্রিকেট এক্সচেঞ্জ প্ল্যাটফর্ম হিসাবে শুরু হয়েছিল যা দক্ষিণ
-                এশিয়ার বাজারে পরিবেশন করে৷ আমাদের লক্ষ্য হল আমাদের
-                ব্যবহারকারীদের কাছে অনলাইন ক্যাসিনো বাজি ধরার প্রথম পছন্দ হওয়া।
-                গ্রাহক সেবা এবং বিনোদনের ক্ষেত্রে শুধুমাত্র সেরাটাই প্রত্যাশা
-                করুন!
-              </p>
-            </div>
-          </div>
-          {/* right site */}
-          <div className="w-1/2 text-white space-y-6">
-            <p className="text-base">অফিসিয়াল পার্টনার এবং স্পনসর</p>
-            <div className="flex gap-8">
-              <div className="">
-                <img
-                  className="w-14"
-                  src={
-                    "https://www.babu88.app/static/image/footer/partner1.png"
-                  }
-                  alt=""
-                />
-                <p className="text-sm font-semibold max-w-8 mt-2">
-                  Montreal Tigers
-                </p>
-              </div>
-              <div className="">
-                <img
-                  className="w-14"
-                  src={
-                    "https://www.babu88.app/static/image/footer/partner2.png"
-                  }
-                  alt=""
-                />
-                <p className="text-sm font-semibold max-w-8 mt-2">
-                  Colombo Strikers
-                </p>
-              </div>
-              <div className="">
-                <img
-                  className="w-14"
-                  src={
-                    "https://www.babu88.app/static/image/footer/partner3.png"
-                  }
-                  alt=""
-                />
-                <p className="text-sm font-semibold max-w-8 mt-2">
-                  Northern Warriors
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="md:py-10 flex gap-4 border-t md:border-none border-teal-50">
-          {/* left site */}
-          <div className="w-1/2 pt-6 md:pt-0">
-            <p className="text-sm sm:text-base mb-4 text-black md:text-white">
-              প্রত্যয়িত বই
-            </p>
-            <Link to={"/"} target="_blank">
-              <img
-                className="w-40 md:w-44 lg:w-52"
-                src={
-                  "https://www.babu88.app/static/image/footer/babu88-official.png"
-                }
-                alt=""
-              />
+    <div className="bg-[#EEF0F8]">
+      <div className="w-full max-w-5xl mx-auto py-6 px-4 lg:px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 py-4 text-[#3156EB] border-b border-slate-300">
+          {/* Logo */}
+          <div className="col-span-2 md:col-span-1">
+            <Link to={"/"}>
+              <img className="w-20 md:w-28" src={logo} alt="Logo" />
             </Link>
           </div>
-          {/* right site */}
-          <div className="w-1/2 pt-6 md:pt-0">
-            <p className="text-sm sm:text-base mb-4 text-black md:text-white">
-              দায়িত্বশীল গেমিং
-            </p>
-            <div className="flex gap-4">
-              <img
-                className="w-8 sm:w-9 md:w-11"
-                src={"https://www.babu88.app/static/svg/btm-18+.svg"}
-                alt=""
-              />
-              <img
-                className="w-8 sm:w-9 md:w-11"
-                src={"https://www.babu88.app/static/svg/btm-gamcare.svg"}
-                alt=""
-              />
-            </div>
+
+          {/* Casino */}
+          <div className="col-span-1">
+            <h2 className="text-sm lg:text-base font-bold text-black">
+              Casino
+            </h2>
+            <ul className="flex flex-col mt-1 text-xs sm:text-sm">
+              {helpLinks.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.link}
+                    className="relative inline-block after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#8C94B2] after:transition-all after:duration-300 hover:after:w-full hover:text-[#8C94B2]"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-        <div className="py-6 md:py-10 text-white flex gap-4 md:border-t border-teal-50">
-          {/* left site */}
-          <div className="w-1/2 hidden md:block">
-            <p className="text-base mb-4">মূল্যপরিশোধ পদ্ধতি</p>
-            <div className="flex gap-4">
-              <Link>
-                <img
-                  className="w-14 filter grayscale hover:filter-none transition-all duration-500"
-                  src={
-                    "https://www.babu88.app/static/image/footer/icon_footer_bkash_colour.svg"
-                  }
-                  alt=""
-                />
-              </Link>
-              <Link>
-                <img
-                  className="w-14 filter grayscale hover:filter-none transition-all duration-500"
-                  src={
-                    "https://www.babu88.app/static/image/footer/icon_footer_nagad_colour.svg"
-                  }
-                  alt=""
-                />
-              </Link>
-              <Link>
-                <img
-                  className="w-10 filter grayscale hover:filter-none transition-all duration-500"
-                  src={
-                    "https://www.babu88.app/static/image/footer/icon_footer_rocket_colour.svg"
-                  }
-                  alt=""
-                />
-              </Link>
-              <Link>
-                <img
-                  className="w-14 filter grayscale hover:filter-none transition-all duration-500"
-                  src={
-                    "https://www.babu88.app/static/image/footer/icon_footer_upay_colour.svg"
-                  }
-                  alt=""
-                />
-              </Link>
-            </div>
+
+          {/* Information */}
+          <div className="col-span-1">
+            <h2 className="text-sm lg:text-base font-bold text-black">
+              Information
+            </h2>
+            <ul className="flex flex-col mt-1 text-xs sm:text-sm">
+              {gameLinks.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.link}
+                    className="relative inline-block after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#8C94B2] after:transition-all after:duration-300 hover:after:w-full hover:text-[#8C94B2]"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-          {/* right site */}
-          <div className="w-full md:w-1/2">
-            <p className="text-sm sm:text-base mb-2 md:mb-4 text-black md:text-white">
-              আমাদের অনুসরণ করো
-            </p>
-            <div className="flex gap-4">
-              <Link target="_blank">
-                <img
-                  className="w-8 sm:w-9 lg:w-11 filter grayscale hover:filter-none transition-all duration-500"
-                  src={"https://www.babu88.app/static/svg/hover_btm-fb.svg"}
-                  alt=""
-                />
+
+          {/* Social Networks */}
+          <div className="hidden md:block">
+            <h2 className="mb-2 text-base font-bold text-black">
+              Social Networks
+            </h2>
+            <div className="flex gap-2">
+              <Link className="flex items-center justify-center w-8 h-8 text-lg rounded-full text-white bg-blue-400">
+                <FaTelegramPlane />
               </Link>
-              <Link target="_blank">
-                <img
-                  className="w-8 sm:w-9 lg:w-11 transition-all duration-500"
-                  src={"https://www.babu88.app/static/svg/btm-yt.svg"}
-                  alt=""
-                />
+              <Link className="flex items-center justify-center w-8 h-8 text-lg rounded-full text-white bg-red-400">
+                <FaInstagram />
               </Link>
-              <Link target="_blank">
-                <img
-                  className="w-8 sm:w-9 lg:w-11 filter grayscale hover:filter-none transition-all duration-500"
-                  src={"https://www.babu88.app/static/svg/hover_btm-ig.svg"}
-                  alt=""
-                />
-              </Link>
-              <Link target="_blank">
-                <img
-                  className="w-8 sm:w-9 lg:w-11 transition-all duration-500"
-                  src={"https://www.babu88.app/static/svg/btm-twitter.svg"}
-                  alt=""
-                />
-              </Link>
-              <Link target="_blank">
-                <img
-                  className="w-8 sm:w-9 lg:w-11 filter grayscale hover:filter-none transition-all duration-500"
-                  src={"https://www.babu88.app/static/svg/hover_btm-tlg.svg"}
-                  alt=""
-                />
+              <Link className="flex items-center justify-center w-8 h-8 text-lg rounded-full text-white bg-blue-700">
+                <FaFacebookF />
               </Link>
             </div>
           </div>
         </div>
-        <p className="text-sm sm:text-base md:mt-4 pb-8 text-black md:text-white">
-          কপিরাইট © 2024 [ ব্র্যান্ড ]। সমস্ত অধিকার সংরক্ষিত
+
+        {/* payment */}
+        <div className="flex justify-center gap-6 border-b border-slate-300 py-5 lg:py-6">
+          {vendorLogos.map((logo, index) => (
+            <img
+              key={index}
+              className="w-14"
+              src={`https://images.185949949.com/TCG_PROD_IMAGES/RNG_LIST_VENDOR/${logo}`}
+              alt={`Vendor ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        <div className="flex justify-center gap-4 py-4 lg:py-6">
+          {vendorLogos.map((logo, index) => (
+            <img
+              key={index}
+              className="w-14"
+              src={`https://images.185949949.com/TCG_PROD_IMAGES/RNG_LIST_VENDOR/${logo}`}
+              alt={`Vendor ${index + 1}`}
+            />
+          ))}
+        </div>
+        <p className="text-center text-xs text-[#8C94B2] mb-20 lg:mb-6">
+          Bettor IO N.V. is licensed and authorized by the Government of Curacao
+          and operates under the Master License of Gaming Services Provider,
+          N.V. #365/JAZ as an Information Service Provider. Bettor IO N.V.
+          registration number is 157065 and its Business address: Abraham de
+          Veerstraat, 9, Willemstad, Curaçao. Mailing address: P.O. Box 3421,
+          Abraham de Veerstraat, 9, Willemstad, Curaçao. Bettor IO N.V. is
+          licensed and authorized by the Government of Curacao and operates
+          under the Master License of Gaming Services Provider, N.V. #365/JAZ as
+          an Information Service Provider. Bettor IO N.V. registration number is
+          157065 and its Business address: Abraham de Veerstraat, 9, Willemstad,
+          Curaçao. Mailing address: P.O. Box 3421, Abraham de Veerstraat, 9,
+          Willemstad, Curaçao.
         </p>
       </div>
     </div>
